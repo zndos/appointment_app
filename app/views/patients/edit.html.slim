@@ -1,0 +1,14 @@
+h1= t('.title')
+
+= simple_form_for @patient, url: patient_path, method: :put do |form|
+  = form.error_notification
+  - if form.object.errors[:base].present?
+    = form.error_notification message: form.object.errors[:base].to_sentence
+  .form-inputs
+    = form.input :last_name
+    = form.input :first_name
+    = form.input :gender, as: :radio_buttons, collection: gender_collection
+    = form.input :birthday
+    = form.input :phone_number, as: :tel
+  .form-actions
+    = form.submit

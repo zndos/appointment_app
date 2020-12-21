@@ -1,0 +1,22 @@
+ru:
+  activerecord:
+    models:
+      doctor: Врач
+      speciality: Специальность
+    attributes:
+      genders:
+        male: М
+        female: Ж
+      doctor:
+        last_name: Фамилия
+        first_name: Имя
+        gender: Пол
+        speciality: Специальность
+      speciality:
+        name: Наименование
+      patient:
+        last_name: Фамилия
+        first_name: Имя
+        gender: Пол
+        phone_number: Номер телефона
+        birthday: Дата рождения

@@ -1,0 +1,21 @@
+h1= t('.title')
+
+= link_to t('.new'), new_doctor_path
+table.table
+  thead
+    tr
+      th= Doctor.human_attribute_name(:last_name)
+      th= Doctor.human_attribute_name(:first_name)
+      th= Doctor.human_attribute_name(:gender)
+      th= Doctor.human_attribute_name(:speciality)
+      th
+      th
+  tbody
+    - @doctors.each do |doctor|
+      tr
+        td= doctor.last_name
+        td= doctor.first_name
+        td= translate_gender(doctor.gender)
+        td= doctor.speciality
+        td= link_to t('.edit'), edit_doctor_path(doctor)
+        td= link_to t('.delete'), doctor_path(doctor), method: :delete

@@ -1,0 +1,15 @@
+h1= t('.title')
+
+= link_to t('.new'), new_speciality_path
+table.table
+  thead
+    tr
+      th= Speciality.human_attribute_name(:name)
+      th
+      th
+  tbody
+    - @specialities.each do |speciality|
+      tr
+        td= speciality.name
+        td= link_to t('.edit'), edit_speciality_path(speciality)
+        td= link_to t('.delete'), speciality_path(speciality), method: :delete

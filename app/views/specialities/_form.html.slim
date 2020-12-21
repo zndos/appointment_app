@@ -1,0 +1,8 @@
+= simple_form_for(@speciality) do |form|
+  = form.error_notification
+  - if form.object.errors[:base].present?
+    = form.error_notification message: form.object.errors[:base].to_sentence
+  .form-inputs
+    = form.input :name
+  .form-actions
+    = form.submit

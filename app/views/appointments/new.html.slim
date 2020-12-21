@@ -1,0 +1,10 @@
+h1= t('.title', doctor: @doctor)
+
+= simple_form_for([@doctor, @appointment]) do |form|
+  = form.error_notification
+  - if form.object.errors[:base].present?
+    = form.error_notification message: form.object.errors[:base].to_sentence
+  .form-inputs
+    = form.input :appointed_at, as: :datetime
+  .form-actions
+    = form.submit

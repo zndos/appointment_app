@@ -1,0 +1,5 @@
+ru:
+  layouts:
+    application:
+      site_name: Поликлиника №31337
+      sign_out: Выйти

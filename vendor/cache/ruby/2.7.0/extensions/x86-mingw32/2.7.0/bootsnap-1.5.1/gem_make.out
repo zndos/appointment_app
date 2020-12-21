@@ -1,0 +1,16 @@
+current directory: H:/appointment_app/vendor/cache/ruby/2.7.0/gems/bootsnap-1.5.1/ext/bootsnap
+C:/Ruby27/bin/ruby.exe -I C:/Ruby27/lib/ruby/2.7.0 -r ./siteconf20201221-9556-1jlc33n.rb extconf.rb
+creating Makefile
+
+current directory: H:/appointment_app/vendor/cache/ruby/2.7.0/gems/bootsnap-1.5.1/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: H:/appointment_app/vendor/cache/ruby/2.7.0/gems/bootsnap-1.5.1/ext/bootsnap
+make "DESTDIR="
+generating bootsnap-i386-mingw32.def
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: H:/appointment_app/vendor/cache/ruby/2.7.0/gems/bootsnap-1.5.1/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20201221-9556-uems28/bootsnap

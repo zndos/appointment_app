@@ -1,0 +1,9 @@
+ru:
+  simple_form:
+    "yes": 'Да'
+    "no": 'Нет'
+    required:
+      text: 'необходимо заполнить'
+      mark: '*'
+    error_notification:
+      default_message: "Проверьте корректность заполнения полей формы:"

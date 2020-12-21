@@ -1,0 +1,14 @@
+ru:
+  doctors:
+    new:
+      title: Добавить врача
+    edit:
+      title: Редактировать врача %{name}
+    index:
+      title: Список врачей
+      edit: Редактировать
+      delete: Удалить
+      new: Добавить врача
+    show:
+      index: К списку врачей
+      edit: Редактировать

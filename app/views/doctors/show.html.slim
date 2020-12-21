@@ -1,0 +1,18 @@
+h1= @doctor
+
+= link_to t('.index'), doctors_path
+= link_to t('.edit'), edit_doctor_path
+table
+  tbody
+    tr
+      th= Doctor.human_attribute_name(:last_name)
+      td= @doctor.last_name
+    tr
+      th= Doctor.human_attribute_name(:first_name)
+      td= @doctor.first_name
+    tr
+      th= Doctor.human_attribute_name(:gender)
+      td= translate_gender(@doctor.gender)
+    tr
+      th= Doctor.human_attribute_name(:speciality)
+      td= @doctor.speciality

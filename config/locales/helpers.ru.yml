@@ -1,0 +1,20 @@
+ru:
+  helpers:
+    flash:
+      create:
+        success: Создание успешно
+      update:
+        success: Обновление успешно
+      destroy:
+        success: Удаление успешно
+        failure: Удаление не удалось
+    submit:
+      doctor:
+        create: Добавить врача
+        update: Обновить данные врача
+      speciality:
+        create: Добавить
+        update: Обновить
+      patient:
+        create: Сохранить
+        update: Сохранить

@@ -1,0 +1,8 @@
+h1= t('.title')
+
+- @doctors.each do |doctor|
+  .card
+    .card-body
+      h5.card-title= doctor
+      p.card-text= doctor.speciality
+      = link_to t('.new_appointment'), new_doctor_appointment_path(doctor), class: 'btn btn-primary'
