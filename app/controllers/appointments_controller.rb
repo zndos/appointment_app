@@ -1,6 +1,16 @@
 # frozen_string_literal: true
 
 class AppointmentsController < ApplicationController
+
+
+  def index
+    @appointments = Appointment.filter12(current_user.patient)
+  end
+
+  def show
+    @appointment = Appointment.find(params[:id])
+  end
+
   def new
     @doctor = Doctor.find(params[:doctor_id])
     @appointment = Appointment.new(doctor: @doctor)

@@ -7,12 +7,16 @@ html lang="ru"
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
+
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
       = link_to t('.site_name'), root_path, class: 'navbar-brand'
+      = link_to 'Специалисты',specialities_path , class: 'navbar-brand'
+      = link_to 'Приемы', appointments_path ,method: :get,  class: 'navbar-brand'
       .navbar-nav.ml-auto
         - if user_signed_in?
           = link_to current_user.email, edit_patient_path, class: 'nav-item nav-link'
           = link_to t('.sign_out'), destroy_user_session_path, method: :delete, class: 'nav-item nav-link'
+
     .container
       .row
         .col-sm

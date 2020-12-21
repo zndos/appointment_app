@@ -1,15 +1,19 @@
 h1= t('.title')
 
-= link_to t('.new'), new_speciality_path
+h4 Поиск по названию
+= form_tag(specialities_path, method: :get) do
+  = text_field_tag (:search, params[:search])
+  = submit_tag("Search")
+
+
 table.table
   thead
     tr
       th= Speciality.human_attribute_name(:name)
       th
-      th
   tbody
     - @specialities.each do |speciality|
       tr
         td= speciality.name
-        td= link_to t('.edit'), edit_speciality_path(speciality)
-        td= link_to t('.delete'), speciality_path(speciality), method: :delete
+        td= link_to 'запись на прием'
+

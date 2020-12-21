@@ -1,0 +1,14 @@
+h1 Записи
+
+table.table
+  thead
+    tr
+      th scope="col"  Номер врача
+      th scope="col"  Дата
+      th scope="col"  Show
+  tbody
+    - @appointments.each do |appointment|
+      tr
+        td= appointment.doctor_id
+        td= appointment.appointed_at
+        td = link_to 'Show', appointment

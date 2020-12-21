@@ -13,4 +13,6 @@ class Patient < ApplicationRecord
             length: { maximum: 255 }
   validates :gender, :phone_number,
             presence: true
+
+
 end

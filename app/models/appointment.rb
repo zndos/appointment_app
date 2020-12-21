@@ -6,4 +6,6 @@ class Appointment < ApplicationRecord
 
   validates :appointed_at,
             presence: true
+
+  scope :filter12, ->(patient) { where patient: patient }
 end

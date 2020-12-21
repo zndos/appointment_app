@@ -2,8 +2,10 @@
 
 class SpecialitiesController < ApplicationController
   def index
-    @specialities = Speciality.all
+    @specialities = Speciality.search(params[:search])
   end
+
+
 
   def new
     @speciality = Speciality.new
@@ -50,6 +52,6 @@ class SpecialitiesController < ApplicationController
   def speciality_params
     params
       .require(:speciality)
-      .permit(:name)
+      .permit(:name,:search)
   end
 end
