@@ -2,7 +2,10 @@
 
 class DoctorsController < ApplicationController
   def index
-    @doctors = Doctor.eager_load(:speciality).all
+    @speciality = Speciality.find(params[:format])
+    @doctors = Doctor.where(speciality_id:  @speciality.id)
+
+
   end
 
   def new
@@ -38,6 +41,7 @@ class DoctorsController < ApplicationController
   def show
     @doctor = Doctor.find(params[:id])
   end
+
 
   def destroy
     @doctor = Doctor.find(params[:id])

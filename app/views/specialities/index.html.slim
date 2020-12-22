@@ -17,5 +17,5 @@ table.table
     - @specialities.each do |speciality|
       tr
         td= speciality.name
-        td= link_to 'запись на прием'
+        td= link_to 'запись на прием', doctors_path(speciality)
 
