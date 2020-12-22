@@ -1,8 +1,11 @@
 h1= t('.title')
 
-h4 Поиск по названию = form_tag(specialities_path, method: :get) do
-  = text_field_tag (:search, params[:search])
-  = submit_tag("Search")
+
+
+
+= form_tag(specialities_path, :method => "get", id: "search-form") do
+  = text_field_tag :search, params[:search], placeholder: "Search specialities"
+  = submit_tag "Search"
 
 
 table.table

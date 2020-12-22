@@ -1,11 +1,15 @@
 # frozen_string_literal: true
 
 class SpecialitiesController < ApplicationController
+
+
   def index
-    @specialities = Speciality.search(params[:search])
+    if params[:search]
+      @specialities = Speciality.search(params[:search])
+    else
+      @specialities = Speciality.all
+    end
   end
-
-
 
   def new
     @speciality = Speciality.new
