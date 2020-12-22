@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2020_12_20_231329) do
     t.datetime "appointed_at", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "info"
     t.index ["doctor_id"], name: "index_appointments_on_doctor_id"
     t.index ["patient_id"], name: "index_appointments_on_patient_id"
   end
