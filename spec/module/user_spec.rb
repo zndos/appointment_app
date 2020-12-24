@@ -1,19 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe Speciality, :type => :model do
-  man = User.create(email: "jane@doe.com", password: "pw1234",encrypted_password: "",
-                    created_at: DateTime.now,updated_at: DateTime.now + 1.week)
+RSpec.describe User, :type => :model do
 
-  it 'is not valid with nil attributes' do
-    man.name = nil
-    expect(man).to_not be_valid
-  end
+  let(:user) { User.create!(email: 'test@example.com', password: 'password') }
 
   it 'is valid with valid attributes' do
-    expect(man).to be_valid
+    expect(user).to be_valid
   end
 
-
-
+  it 'is not valid with nil attributes' do
+    user.password = "t"*256
+    expect(user).to_not be_valid
+  end
 
 end

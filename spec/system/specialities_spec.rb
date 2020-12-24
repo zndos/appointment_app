@@ -58,7 +58,7 @@ describe 'Специальности:' do
     end
   end
 
-  describe 'удлаение' do
+  describe 'удаление' do
     before do
       # обращаемся к специальностям для создавния в БД
       otolaryngologist
