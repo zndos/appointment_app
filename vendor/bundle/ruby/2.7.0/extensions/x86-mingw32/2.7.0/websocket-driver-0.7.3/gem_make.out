@@ -1,0 +1,16 @@
+current directory: H:/appointment_app/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+C:/Ruby27/bin/ruby.exe -I C:/Ruby27/lib/ruby/2.7.0 -r ./siteconf20201223-2448-17ds7qf.rb extconf.rb
+creating Makefile
+
+current directory: H:/appointment_app/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: H:/appointment_app/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR="
+generating websocket_mask-i386-mingw32.def
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: H:/appointment_app/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20201223-2448-1bj4vd4

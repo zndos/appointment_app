@@ -1,0 +1,24 @@
+current directory: H:/appointment_app/vendor/bundle/ruby/2.7.0/gems/puma-4.3.6/ext/puma_http11
+C:/Ruby27/bin/ruby.exe -I C:/Ruby27/lib/ruby/2.7.0 -r ./siteconf20201223-2448-1dzjw3q.rb extconf.rb
+checking for whether -D_FORTIFY_SOURCE=2 is accepted as CFLAGS... yes
+checking for whether -fstack-protector is accepted as LDFLAGS... yes
+checking for -lssp... yes
+checking for BIO_read() in -lcrypto... no
+checking for BIO_read() in -llibeay32... no
+creating Makefile
+
+current directory: H:/appointment_app/vendor/bundle/ruby/2.7.0/gems/puma-4.3.6/ext/puma_http11
+make "DESTDIR=" clean
+
+current directory: H:/appointment_app/vendor/bundle/ruby/2.7.0/gems/puma-4.3.6/ext/puma_http11
+make "DESTDIR="
+generating puma_http11-i386-mingw32.def
+compiling http11_parser.c
+compiling io_buffer.c
+compiling mini_ssl.c
+compiling puma_http11.c
+linking shared-object puma/puma_http11.so
+
+current directory: H:/appointment_app/vendor/bundle/ruby/2.7.0/gems/puma-4.3.6/ext/puma_http11
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20201223-2448-1xitau6/puma

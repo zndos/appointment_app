@@ -9,8 +9,11 @@ Rails.application.routes.draw do
     resources :appointments, shallow: true
   end
   resource :patient, except: %i[new create show destroy]
+
+
   resources :appointments
-  get 'results', to: 'results#index', as: 'results'
+
+
   resources :specialities do
     resources :doctors
   end

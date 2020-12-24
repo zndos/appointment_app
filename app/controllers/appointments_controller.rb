@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class AppointmentsController < ApplicationController
-
-
   def index
     @appointments = Appointment.filter12(current_user.patient)
   end
@@ -14,6 +12,20 @@ class AppointmentsController < ApplicationController
   def new
     @doctor = Doctor.find(params[:doctor_id])
     @appointment = Appointment.new(doctor: @doctor)
+    # TODO СООБЩЕНИЕ
+
+  end
+
+  def destroy
+    @appointment = Appointment.find(params[:id])
+
+    if @appointment.destroy
+      flash[:notice] = t(:success, scope: 'helpers.flash.destroy')
+    else
+      flash[:error] = t(:failure, scope: 'helpers.flash.destroy')
+    end
+
+    redirect_to appointments_path
   end
 
   def create

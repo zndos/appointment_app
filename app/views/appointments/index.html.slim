@@ -5,10 +5,14 @@ table.table
     tr
       th scope="col"  Номер врача
       th scope="col"  Дата
-      th scope="col"  Show
+      th scope="col"
+      th scope="col"
   tbody
     - @appointments.each do |appointment|
       tr
         td= appointment.doctor_id
         td= appointment.appointed_at
-        td = link_to 'Show', appointment
+        td = link_to 'Подробнее', appointment
+        td = link_to 'Отменить', appointment_path(appointment),
+                method: :delete,
+                data: { confirm: 'Уверены?' }
