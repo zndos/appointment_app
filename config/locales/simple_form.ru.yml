@@ -7,3 +7,5 @@ ru:
       mark: '*'
     error_notification:
       default_message: "Проверьте корректность заполнения полей формы:"
+    submit: "Подтвердить"
+

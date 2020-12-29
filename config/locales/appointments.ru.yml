@@ -2,3 +2,4 @@ ru:
   appointments:
     new:
       title: Записаться к врачу (%{doctor})
+      submit: Подтвердить
