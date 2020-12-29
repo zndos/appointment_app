@@ -17,4 +17,9 @@ class Doctor < ApplicationRecord
   def to_s
     "#{last_name} #{first_name}"
   end
+
+  def self.search(search)
+    where("last_name LIKE ?", "%#{search}%")
+  end
+
 end

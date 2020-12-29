@@ -1,18 +1,37 @@
-h1 Записи
 
+p Будущие приемы
 table.table
   thead
     tr
-      th scope="col"  Номер врача
+      th scope="col"  Врача
       th scope="col"  Дата
       th scope="col"
       th scope="col"
   tbody
-    - @appointments.each do |appointment|
+    - @appointments.sort_by(&:appointed_at).each do |appointment|
       tr
-        td= appointment.doctor_id
-        td= appointment.appointed_at
-        td = link_to 'Подробнее', appointment
-        td = link_to 'Отменить', appointment_path(appointment),
-                method: :delete,
-                data: { confirm: 'Уверены?' }
+        -if appointment.appointed_at>DateTime.now
+          td= appointment.doctor.speciality
+          td= appointment.appointed_at
+          td = link_to 'Подробнее', appointment
+          td = link_to 'Отменить', appointment_path(appointment),
+                  method: :delete,
+                  data: { confirm: 'Уверены?' }
+
+p Прошлые приемы
+table.table
+  thead
+    tr
+      th scope="col"  Врача
+      th scope="col"  Дата
+      th scope="col"
+      th scope="col"
+  tbody
+    - @appointments.sort_by(&:appointed_at).each do |appointment|
+      tr
+        -if appointment.appointed_at<DateTime.now
+          td= appointment.doctor.speciality
+          td= appointment.appointed_at
+          td = link_to 'Подробнее', appointment
+          td
+

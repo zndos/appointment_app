@@ -1,10 +1,12 @@
+h1 Прием
+p
+  | Дата:  #{@appointment.appointed_at}
 
-= @appointment.appointed_at
-br
-= @appointment.doctor_id
-br
-= @appointment.patient_id
-br
-= @appointment.info
-br
-=link_to "Изменить дату"
+p
+  | Врач:  #{@appointment.doctor}
+-if @appointment.appointed_at>DateTime.now
+  p
+    | Инфо:  #{@appointment.info}
+
+-if @appointment.appointed_at<DateTime.now
+  =link_to "Изменить дату"

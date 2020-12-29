@@ -2,8 +2,14 @@
 
 class DoctorsController < ApplicationController
   def index
-    @speciality = Speciality.find(params[:format])
-    @doctors = Doctor.where(speciality_id:  @speciality.id)
+    if params[:format]
+      @speciality = Speciality.find(params[:format])
+      @doctors = Doctor.where(speciality_id:  @speciality.id)
+    elsif params[:search]
+      @doctors = Doctor.search(params[:search])
+    else
+      @doctors = Doctor.all
+    end
 
 
   end
