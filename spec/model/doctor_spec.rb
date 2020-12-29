@@ -2,12 +2,12 @@ require 'rails_helper'
 
 RSpec.describe Doctor, :type => :model do
 
-  let(:speciality) {Speciality.create!(name: 'Терапевт')}
+  let(:speciality) { Speciality.create!(name: 'Терапевт') }
 
-  let(:doctor) {Doctor.create!(last_name: 'Петрова',
-                               first_name: 'Фемида',
-                               gender: 'female',
-                               speciality: speciality)}
+  let(:doctor) { Doctor.create!(last_name: 'Петрова',
+                                first_name: 'Фемида',
+                                gender: 'female',
+                                speciality: speciality) }
 
   it 'is validate with valid attributes' do
     expect(doctor).to be_valid
@@ -38,13 +38,13 @@ RSpec.describe Doctor, :type => :model do
   end
 
   it " 's first_name should be less then 255 symbols" do
-    doctor.first_name = "t"*256
+    doctor.first_name = "t" * 256
     expect(doctor).to_not be_valid
     doctor.first_name = 'Фемида'
   end
 
   it " 's last_name should be less then 255 symbols" do
-    doctor.last_name = "t"*256
+    doctor.last_name = "t" * 256
     expect(doctor).to_not be_valid
     doctor.last_name = 'Петрова'
   end

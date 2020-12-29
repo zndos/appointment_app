@@ -8,9 +8,7 @@ RSpec.describe Patient, :type => :model do
                                   phone_number: "123213321",
                                   user_id: user.id) }
 
-  it "valid with valid attributes" do
-    expect(patient).to be_valid
-  end
+
 
   it "'first_name should be less then 255 symbols" do
     patient.first_name = "t" * 256
