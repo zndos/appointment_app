@@ -1,10 +1,14 @@
 h1= t('.title')
-
+p
+  |
 
 = form_tag(doctors_path, :method => "get", id: "search-form") do
   = text_field_tag :search, params[:search], placeholder: "Поиск врача"
+  = "   "
   = submit_tag "Поиск"
-br
+p
+  |
+
 - @doctors.each do |doctor|
   .card
     .card-body

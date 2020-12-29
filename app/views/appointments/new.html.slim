@@ -1,11 +1,9 @@
+p
+  |
 h1= t('.title', doctor: @doctor)
+p
+  |
 
-= simple_form_for([@doctor, @appointment]) do |form|
-  = form.error_notification
-  - if form.object.errors[:base].present?
-    = form.error_notification message: form.object.errors[:base].to_sentence
-  .form-inputs
-    = form.input :appointed_at, as: :datetime
-  .form-actions
-    = form.submit
-
+= simple_form_for [@doctor, @appointment] do |form|
+  = form.input :appointed_at, as: :datetime, label: false
+  = form.submit "Подтвердить" , class: 'btn btn-primary'
